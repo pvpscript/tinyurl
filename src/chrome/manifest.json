@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"description": "A tinyurl browser extension",
 	"manifest_version": 2,
-	"permissions": ["tabs", "https://tinyurl.com"],
+	"permissions": ["tabs", "https://tinyurl.com/*"],
 
 	"icons": {},
 
