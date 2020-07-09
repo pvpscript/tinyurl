@@ -50,12 +50,6 @@ fetch(url).then(r => r.text()).then(result => {
 	//console.log(html);
 });
 
-chrome.contextMenus.create({
-	title: "Testing title",
-	contexts: ["page"],
-	id: "12312938",
-});
-
-chrome.contextMenus.onClicked.addListener((info, tab) => {
-	alert("hello");
-});
+function test() {
+	alert("I'm running tests");
+}

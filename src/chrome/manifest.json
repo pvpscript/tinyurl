@@ -10,7 +10,10 @@
 	"icons": {},
 
 	"background": {
-		"scripts": ["background_scripts/background.js"],
+		"scripts": [
+			"background_scripts/background.js",
+			"background_scripts/context_menu.js"
+		],
 		"persistent": false
 	},
 	"browser_action": {
