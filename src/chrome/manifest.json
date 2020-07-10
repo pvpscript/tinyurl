@@ -11,7 +11,7 @@
 
 	"background": {
 		"scripts": [
-			"background_scripts/background.js",
+			"background_scripts/core.js",
 			"background_scripts/context_menu.js"
 		],
 		"persistent": false
