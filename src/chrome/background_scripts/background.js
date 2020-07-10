@@ -1,5 +1,3 @@
-const url = "https://tinyurl.com/create.php?source=indexpage&url=https://www.youtube.com/watch?v=dQw4w9WgXcQ&alias=rolldwg09jq";
-
 const resType = {
 	error: [
 		{
