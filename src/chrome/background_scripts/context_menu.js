@@ -1,9 +1,13 @@
 chrome.contextMenus.create({
-	title: "Testing title",
+	title: "Create TinyURL",
 	contexts: ["page"],
-	id: "context_menu_id",
+	id: "create_tinyurl",
 });
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
-	test();
+	const formattedUrl = formatUrl(tab.url);
+	console.log(formattedUrl);
+
+	makeTinyUrl(formattedUrl);
 });
+
