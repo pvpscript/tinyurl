@@ -5,7 +5,7 @@ chrome.contextMenus.create({
 });
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
-	const formattedUrl = formatUrl(tab.url);
+	const formattedUrl = formatUrl(encodeURIComponent(tab.url));
 	console.log(formattedUrl);
 
 	makeTinyUrl(formattedUrl);
