@@ -26,6 +26,12 @@ function formatUrl(url, alias) {
 	return model;
 }
 
+const tabAlert = (msg) =>
+	chrome.tabs.executeScript(null, {code: `alert("${msg}");`});
+
+const tabPrompt = (msg, callback) =>
+	chrome.tabs.executeScript(null, {code: `prompt("${msg}");`}, callback);
+
 function makeTinyUrl(formattedUrl) {
 	fetch(formattedUrl).then(r => r.text()).then(result => {
 		const html = document.createElement("html");
@@ -35,22 +41,21 @@ function makeTinyUrl(formattedUrl) {
 			.children[0].innerText;
 		
 		if (elements.search(resType.success.query) > -1) {
-			alert(resType.success.msg);
 			const url = html.querySelector('a[id="copy_div"]').href;
-			alert(`URL: ${url}`);
+			tabAlert(resType.success.msg + "\\n\\nURL: " + url);
 		} else {
 			let foundError = false;
 
 			for (e of resType.error) {
 				if (elements.search(e.query) > -1) {
 					foundError = true;
-					alert(e.msg);
+					tabAlert(e.msg);
 					break;
 				}
 			}
 
 			if (!foundError) {
-				alert("An unknown error occurred.");
+				tabAlert("An unknown error occurred.");
 			}
 		}
 		//console.log(html);

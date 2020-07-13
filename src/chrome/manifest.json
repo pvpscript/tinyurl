@@ -3,7 +3,9 @@
 	"version": "0.0.1",
 	"description": "A tinyurl browser extension",
 	"manifest_version": 2,
-	"permissions": ["tabs", "contextMenus", "https://tinyurl.com/*"],
+	"permissions": [
+		"tabs", "activeTab", "contextMenus", "https://tinyurl.com/*"
+	],
 
 	"options_page": "view/options/options.html",
 

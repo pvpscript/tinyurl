@@ -18,18 +18,18 @@ const menus = {
 		makeTinyUrl(formattedUrl);
 	},
 	"create_alias": (url) => {
-		const alias = prompt("Type in an alias");
+		tabPrompt("Type in an alias", (alias) => {
+			if (alias) {
+				const formattedUrl = formatUrl(
+					encodeURIComponent(url),
+					encodeURIComponent(alias)
+				);
 
-		if (alias) {
-			const formattedUrl =
-				formatUrl(encodeURIComponent(url), alias);
-			console.log(formattedUrl);
-
-			makeTinyUrl(formattedUrl);
-		}
+				makeTinyUrl(formattedUrl);
+			}
+		});
 	}
 }
-
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
 	const method = menus[info.menuItemId];
