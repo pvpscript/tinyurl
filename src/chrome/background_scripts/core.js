@@ -26,6 +26,19 @@ function formatUrl(url, alias) {
 	return model;
 }
 
+function copyToClipboard(text) {
+	const randId = Math.random().toString(36).slice(2, -1);
+	const txtElement = document.createElement("textarea");
+	txtElement.textContent = text;
+
+	document.body.appendChild(txtElement);
+	txtElement.select();
+
+	document.execCommand("copy");
+
+	document.body.removeChild(txtElement);
+}
+
 const tabAlert = (msg) =>
 	chrome.tabs.executeScript(null, {code: `alert("${msg}");`});
 
@@ -42,6 +55,8 @@ function makeTinyUrl(formattedUrl) {
 		
 		if (elements.search(resType.success.query) > -1) {
 			const url = html.querySelector('a[id="copy_div"]').href;
+			copyToClipboard(url);
+
 			tabAlert(resType.success.msg + "\\n\\nURL: " + url);
 		} else {
 			let foundError = false;

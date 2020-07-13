@@ -4,7 +4,8 @@
 	"description": "A tinyurl browser extension",
 	"manifest_version": 2,
 	"permissions": [
-		"tabs", "activeTab", "contextMenus", "https://tinyurl.com/*"
+		"tabs", "activeTab", "contextMenus", "clipboardWrite",
+		"https://tinyurl.com/*"
 	],
 
 	"options_page": "view/options/options.html",
