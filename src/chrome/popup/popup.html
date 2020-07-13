@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <div class="tabs-content">
+      <input type="radio" class="tab-title" name="tabs" id="tab1" checked>
+      <label for="tab1">Simple</label>
+      <input type="radio" class="tab-title" name="tabs" id="tab2">
+      <label for="tab2">Aliased</label>
+      <div class="tab content1">
+        <form id="simple" action="#">
+          <div class="form-content">
+            <input class="submit" type="submit" value="Create TinyURL">
+          </div>
+        </form>
+      </div>
+      <div class="tab content2">
+        <form id="aliased" action="#">
+          <div class="form-content">
+            <div class="labeled-input">
+              <span>Alias: </span>
+              <input type="text" id="alias" placeholder="Enter alias" maxlength="30">
+            </div>
+            <input class="submit" type="submit" value="Create TinyURL">
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
