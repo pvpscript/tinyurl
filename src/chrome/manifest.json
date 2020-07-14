@@ -15,7 +15,8 @@
 	"background": {
 		"scripts": [
 			"background_scripts/core.js",
-			"background_scripts/context_menu.js"
+			"background_scripts/context_menu.js",
+			"background_scripts/popup.js"
 		],
 		"persistent": false
 	},
