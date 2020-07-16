@@ -1,12 +1,18 @@
 body {
   font-family: "Bookman Old Style", sans-serif;
+  background: #433D3D;
+  color: #FFFFFF;
+}
+
+li.thick {
+  font-weight: bold;
 }
 
 .sidebar {
   position: fixed;
   height: 100%;
   width: 160px;
-  background-color: #111111;
+  background-color: #181616;
   top: 0;
   left: 0;
   overflow-x: hidden;
@@ -15,7 +21,7 @@ body {
 .sidebar a {
   display: block;
   text-decoration: none;
-  color: #818181;
+  color: #897E7E;
   padding: 6px 8px 6px 16px;
   font-size: 20px;
   border: 1px solid white;
@@ -29,12 +35,12 @@ body {
 .sidebar a:hover {
   color: #f1f1f1;
   border-left: 5px solid white;
-  border-left-color: #97B2FE;
+  border-left-color: #FFFFFF;
 }
 
 .main {
   margin-left: 160px;
-  font-size: 28px;
+  font-size: 25px;
   padding: 0 10px;
 }
 
@@ -45,8 +51,7 @@ body {
 .tab-content:target {
     display: block;
 }
- 
-/*
+ /*
 .tab-content, .tab-content:target ~ .tab-content:last-child  {
   display: none;
 }
