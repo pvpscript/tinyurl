@@ -26,6 +26,10 @@ div.sub-elements {
   padding: 5px 0px 0px 15px;
 }
 
+a {
+  color: inherit;
+}
+
 .sidebar {
   position: fixed;
   height: 100%;
@@ -60,6 +64,10 @@ div.sub-elements {
   margin-left: 160px;
   font-size: 25px;
   padding: 0 10px;
+}
+
+.main a {
+  color: #7FFFD4;
 }
 
 .tab-content {
