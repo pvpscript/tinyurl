@@ -4,6 +4,14 @@ body {
   color: #FFFFFF;
 }
 
+h1 {
+  text-decoration: overline;
+}
+
+.tinyurl {
+  color: #BAF73C;
+}
+
 li.thick {
   font-weight: bold;
 }
@@ -17,6 +25,10 @@ fieldset {
   margin: 0px 0px 30px;
 }
 
+fieldset > legend {
+  color: #FF6347;
+}
+
 div.elements {
   font-size: 80%;
 }
@@ -24,6 +36,14 @@ div.elements {
 div.sub-elements {
   position: inline-block;
   padding: 5px 0px 0px 15px;
+}
+
+.closer-paragraphs > p {
+  margin: 5px;
+}
+
+.question {
+  color: #F1A9A0;
 }
 
 a {
