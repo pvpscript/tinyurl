@@ -38,6 +38,7 @@ a {
   top: 0;
   left: 0;
   overflow-x: hidden;
+  border-right: 1px solid white;
 }
 
 .sidebar a {
@@ -48,6 +49,8 @@ a {
   font-size: 20px;
   border: 1px solid white;
   border-right: none;
+  border-left: 1px solid white;
+  transition: border-left 0.3s;
 }
 
 .sidebar a:not(:last-child) {
@@ -56,7 +59,7 @@ a {
 
 .sidebar a:hover {
   color: #f1f1f1;
-  border-left: 5px solid white;
+  border-left: 10px solid white;
   border-left-color: #FFFFFF;
 }
 
