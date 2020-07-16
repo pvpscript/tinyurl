@@ -1,0 +1,57 @@
+body {
+  font-family: "Bookman Old Style", sans-serif;
+}
+
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 160px;
+  background-color: #111111;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+}
+
+.sidebar a {
+  display: block;
+  text-decoration: none;
+  color: #818181;
+  padding: 6px 8px 6px 16px;
+  font-size: 20px;
+  border: 1px solid white;
+  border-right: none;
+}
+
+.sidebar a:not(:last-child) {
+  border-bottom: none;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+  border-left: 5px solid white;
+  border-left-color: #97B2FE;
+}
+
+.main {
+  margin-left: 160px;
+  font-size: 28px;
+  padding: 0 10px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content:target {
+    display: block;
+}
+ 
+/*
+.tab-content, .tab-content:target ~ .tab-content:last-child  {
+  display: none;
+}
+
+.tab-content:last-child, .tab-content:target {
+  display: block;
+}
+*/
