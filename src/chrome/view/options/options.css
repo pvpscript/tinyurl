@@ -12,6 +12,20 @@ p.offset-left {
   padding: 0px 0px 0px 10px;
 }
 
+fieldset {
+  width: 50%;
+  margin: 0px 0px 30px;
+}
+
+div.elements {
+  font-size: 80%;
+}
+
+div.sub-elements {
+  position: inline-block;
+  padding: 5px 0px 0px 15px;
+}
+
 .sidebar {
   position: fixed;
   height: 100%;

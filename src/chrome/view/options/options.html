@@ -30,7 +30,27 @@
         <p>The automatic clipboard behavior can be changed in the "Options" section of this page.</p>
       </div>
       <div id="settings" class="tab-content">
-        Extension's options;
+        <h1>Settings</h1>
+        <fieldset>
+          <legend>Alert settings</legend>
+          <div class="elements">
+            <input type="checkbox" name="enable-alerts" id="enable-alerts">
+            <label for="enable-alerts">Enable alerts</label>
+            <div class="sub-elements">
+              <input type="radio" name="alert-type" id="ext-alert">
+              <label for="ext-alert">Show extension alert</label>
+              <input type="radio" name="alert-type" id="page-alert">
+              <label for="page-alert">Show page alert</label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Clipboard settings</legend>
+          <div class="elements">
+            <input type="checkbox" name="autocopy" id="autocopy">
+            <label for="autocopy">Enable automatic copy</label>
+          </div>
+        </fieldset>
       </div>
       <div id="feedback" class="tab-content">
         Feedback;
