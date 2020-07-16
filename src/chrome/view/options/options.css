@@ -8,6 +8,10 @@ li.thick {
   font-weight: bold;
 }
 
+p.offset-left {
+  padding: 0px 0px 0px 10px;
+}
+
 .sidebar {
   position: fixed;
   height: 100%;
