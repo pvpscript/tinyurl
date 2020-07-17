@@ -76,3 +76,13 @@ function makeTinyUrl(formattedUrl) {
 		//console.log(html);
 	});
 }
+
+chrome.runtime.onInstalled.addListener(() => {
+	const settings = {
+		alerts: true,
+		autoCopy: true,
+		alertType: "page"
+	};
+
+	chrome.storage.sync.set({settings: settings});
+});
