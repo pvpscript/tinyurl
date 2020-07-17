@@ -40,13 +40,21 @@ function copyToClipboard(text) {
 }
 
 const tabAlert = (msg) =>
-	chrome.tabs.executeScript(null, {code: `alert("${msg}");`});
+	chrome.tabs.executeScript(null, {
+		code: `alert(decodeURI("${msg}"));`
+	});
 
 const tabPrompt = (msg, callback) =>
-	chrome.tabs.executeScript(null, {code: `prompt("${msg}");`}, callback);
+	chrome.tabs.executeScript(null, {
+		code: `prompt(decodeURI("${msg}"));`
+	}, callback);
 
-function makeTinyUrl(formattedUrl) {
+function makeTinyUrl(formattedUrl, settings) {
 	fetch(formattedUrl).then(r => r.text()).then(result => {
+		const showAlert = settings.popupType == "page"
+			? (msg) => tabAlert(msg)
+			: (msg) => alert(decodeURI(msg));
+
 		const html = document.createElement("html");
 		html.innerHTML = result;
 
@@ -55,22 +63,24 @@ function makeTinyUrl(formattedUrl) {
 		
 		if (elements.search(resType.success.query) > -1) {
 			const url = html.querySelector('a[id="copy_div"]').href;
-			copyToClipboard(url);
+			if (settings.autoCopy) {
+				copyToClipboard(url);
+			}
 
-			tabAlert(resType.success.msg + "\\n\\nURL: " + url);
+			showAlert(resType.success.msg + "%0A%0AURL: " + url);
 		} else {
 			let foundError = false;
 
 			for (e of resType.error) {
 				if (elements.search(e.query) > -1) {
 					foundError = true;
-					tabAlert(e.msg);
+					showAlert(e.msg);
 					break;
 				}
 			}
 
 			if (!foundError) {
-				tabAlert("An unknown error occurred.");
+				showAlert("An unknown error occurred.");
 			}
 		}
 		//console.log(html);

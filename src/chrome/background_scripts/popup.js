@@ -1,7 +1,9 @@
 function makeTinyUrlFromPopup(url, alias) {
 	const formattedUrl = formatUrl(encodeURIComponent(url), alias);
 
-	makeTinyUrl(formattedUrl);
+	chrome.storage.sync.get(['settings'], (result) => {
+		makeTinyUrl(formattedUrl, result.settings);
+	});
 }
 
 const methods = {
