@@ -79,9 +79,8 @@ function makeTinyUrl(formattedUrl) {
 
 chrome.runtime.onInstalled.addListener(() => {
 	const settings = {
-		alerts: true,
 		autoCopy: true,
-		alertType: "page"
+		popupType: "page"
 	};
 
 	chrome.storage.sync.set({settings: settings});
