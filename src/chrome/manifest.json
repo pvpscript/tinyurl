@@ -5,6 +5,7 @@
 	"manifest_version": 2,
 	"permissions": [
 		"tabs", "activeTab", "contextMenus", "clipboardWrite",
+		"storage",
 		"https://tinyurl.com/*"
 	],
 
