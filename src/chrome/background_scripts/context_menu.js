@@ -1,12 +1,12 @@
 chrome.contextMenus.create({
 	title: "Create TinyURL",
-	contexts: ["page"],
+	contexts: ["all"],
 	id: "create",
 });
 
 chrome.contextMenus.create({
 	title: "Create TinyURL with alias",
-	contexts: ["page"],
+	contexts: ["all"],
 	id: "create_alias"
 });
 
