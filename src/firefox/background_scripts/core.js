@@ -51,8 +51,8 @@ const tabPrompt = (msg, callback) =>
 
 function makeTinyUrl(formattedUrl, settings) {
 	fetch(formattedUrl).then(r => r.text()).then(result => {
-		const html = document.createElement("html");
-		html.innerHTML = result;
+		const parser = new DOMParser();
+		const html = parser.parseFromString(result, "text/html");
 
 		const elements = html.querySelector('div[id="contentcontainer"]')
 			.children[0].innerText;
