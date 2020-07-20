@@ -18,14 +18,7 @@ const menus = {
 		makeTinyUrl(formattedUrl, settings);
 	},
 	"create_alias": (url, settings) => {
-		const showPrompt = settings.popupType == "page"
-			? (msg, callback) => tabPrompt(msg, callback)
-			: (msg, callback) => {
-				const res = prompt(msg);
-				callback(res);
-			};
-
-		showPrompt("Type in an alias", (alias) => {
+		tabPrompt("Type in an alias", (alias) => {
 			if (alias) {
 				const formattedUrl = formatUrl(
 					encodeURIComponent(url),

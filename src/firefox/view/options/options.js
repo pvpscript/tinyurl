@@ -8,8 +8,6 @@ settings.addEventListener("change", (e) => {
 
 		if (element.id === "autocopy") {
 			settings.autoCopy = element.checked;
-		} else {
-			settings.popupType = element.id;
 		}
 
 		browser.storage.sync.set({settings: settings});
@@ -18,12 +16,7 @@ settings.addEventListener("change", (e) => {
 
 browser.storage.sync.get(['settings'], (result) => {
 	const settings = result.settings;
-
 	const autocopy = document.getElementById("autocopy");
-	const popupBox = document.getElementById(settings.popupType);
-
-	console.log(settings);
 
 	autocopy.checked = settings.autoCopy;
-	popupBox.checked = true;
 });

@@ -51,10 +51,6 @@ const tabPrompt = (msg, callback) =>
 
 function makeTinyUrl(formattedUrl, settings) {
 	fetch(formattedUrl).then(r => r.text()).then(result => {
-		const showAlert = settings.popupType == "page"
-			? (msg) => tabAlert(msg)
-			: (msg) => alert(decodeURI(msg));
-
 		const html = document.createElement("html");
 		html.innerHTML = result;
 
@@ -67,20 +63,20 @@ function makeTinyUrl(formattedUrl, settings) {
 				copyToClipboard(url);
 			}
 
-			showAlert(resType.success.msg + "%0A%0AURL: " + url);
+			tabAlert(resType.success.msg + "%0A%0AURL: " + url);
 		} else {
 			let foundError = false;
 
 			for (e of resType.error) {
 				if (elements.search(e.query) > -1) {
 					foundError = true;
-					showAlert(e.msg);
+					tabAlert(e.msg);
 					break;
 				}
 			}
 
 			if (!foundError) {
-				showAlert("An unknown error occurred.");
+				tabAlert("An unknown error occurred.");
 			}
 		}
 		//console.log(html);
@@ -90,7 +86,6 @@ function makeTinyUrl(formattedUrl, settings) {
 browser.runtime.onInstalled.addListener(() => {
 	const settings = {
 		autoCopy: true,
-		popupType: "page"
 	};
 
 	browser.storage.sync.set({settings: settings});
