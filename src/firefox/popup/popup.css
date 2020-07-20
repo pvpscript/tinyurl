@@ -1,0 +1,52 @@
+body {
+  font-size: 16px;
+  height: 120px;
+}
+.tabs-content {
+  width: 300px;
+  height: 70px;
+}
+
+.labeled-input {
+  margin: 0 0 5px;
+}
+
+.tab-title {
+  display: none;
+}
+
+.tab-title + label {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 4px 4px 0 0;
+  padding: 4px 20px;
+  position: relative;
+  margin: 0;
+  top: 1px;
+  background: #8D97A1;
+}
+
+.tab {
+  background: #00FFB7;
+  height: 100%;
+}
+
+.form-content {
+  margin: 0 5px;
+}
+
+.tab-title ~ .tab {
+  display: none;
+  border: 1px solid black;
+  padding: 10px 1px;
+}
+
+#tab1:checked ~ .tab.content1,
+#tab2:checked ~ .tab.content2 {
+  display: block;
+}
+
+input:checked + label {
+  background: #00FFB7;
+  border-bottom: 1px solid transparent;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <div class="sidebar">
+      <a href="#how-to-use">How to use</a>
+      <a href="#settings">Settings</a>
+      <a href="#feedback">Feedback</a>
+    </div>
+    <div class="main">
+      <div id="how-to-use" class="tab-content">
+        <h1>How to use</h1>
+        <p>
+        After installing the extension, there will be two ways to create a <span class="tinyurl">TinyURL</span>. Those are described bellow:
+        </p>
+        
+        <ol>
+          <li class="thick">Using the extension menu:</li>
+          <img src="../images/extension_button.png">
+          <p>By clicking the "Create <span class="tinyurl">TinyURL</span>" button, the extension will create a tinyurl for the current page you are in, and it will copy the resulting url to the clipboard by default.</p>
+          <p>The aliased section will have an alias input for customizing the resulting <span class="tinyurl">TinyURL</span>.</p>
+          <li class="thick">Using the rightclick menu:</li>
+          <img src="../images/rightclick_menu.png">
+          <p>Click "Create <span class="tinyurl">TinyURL</span>" to quickly create a shortened version of the current page's url.</p>
+          <p>The "Create <span class="tinyurl">TinyURL</span> with alias" will pop up a prompt to type in the desired alias.</p>
+        </ol>
+        <br>
+        <p>The automatic clipboard behavior can be changed in the "Settings" section of this page.</p>
+      </div>
+      <div id="settings" class="tab-content">
+        <h1>Settings</h1>
+        <fieldset>
+          <legend>Popup box settings</legend>
+          <div class="elements">
+            <input type="radio" name="alert-type" id="extension">
+            <label for="extension">Show extension popup boxes</label>
+            <input type="radio" name="alert-type" id="page">
+            <label for="page">Show page popup boxes</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Clipboard settings</legend>
+          <div class="elements">
+            <input type="checkbox" name="autocopy" id="autocopy">
+            <label for="autocopy">Enable automatic copy</label>
+          </div>
+        </fieldset>
+      </div>
+      <div id="feedback" class="tab-content">
+        <h1>Feedback</h1>
+	<p>This extension was built upon the <span class="tinyurl">TinyURL</span> url shortener. You can visit them by clicking <a href="https://www.tinyurl.com">here</a> or accessing <span class="tinyurl">www.tinyurl.com</span>.</p>
+	<br>
+	<div class="closer-paragraphs">
+	  <p><span class="question">Like this extension?</span> Make sure to leave 5 stars at the <a href="#">extension store</a>.</p>
+	  <p><span class="question">Found a bug or want a new feature implemented?</span> Leave a comment at the <a href="#">store</a> or open an issue at the <a href="https://github.com/pvpscript/tinyurl/issues">github issues page</a>.</p>
+	  <p><span class="question">Wanna know the source code?</span> Access the <a href="https://github.com/pvpscript/tinyurl">project page</a> in my github.</p>
+	</div>
+      </div>
+    </div>
+  <script src="options.js"></script>
+  </body>
+</html>
