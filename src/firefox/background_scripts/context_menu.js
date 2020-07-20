@@ -2,12 +2,16 @@ browser.contextMenus.create({
 	title: "Create TinyURL",
 	contexts: ["all"],
 	id: "create",
+}, () => {
+	console.log(chrome.runtime.lastError);
 });
 
 browser.contextMenus.create({
 	title: "Create TinyURL with alias",
 	contexts: ["all"],
 	id: "create_alias"
+}, () => {
+	console.log(chrome.runtime.lastError);
 });
 
 const menus = {
