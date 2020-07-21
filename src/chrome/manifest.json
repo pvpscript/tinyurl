@@ -13,7 +13,10 @@
 		"https://tinyurl.com/*"
 	],
 
-	"options_page": "view/options/options.html",
+	"options_ui": {
+		"page": "view/options/options.html",
+		"open_in_tab": true
+	},
 
 	"icons": {
 		"128": "icons/icon128.png",
