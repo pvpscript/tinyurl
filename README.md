@@ -9,7 +9,7 @@ There are two ways of using it:
 * By right clicking anywhere on the current page and going to the `TinyURL` context menu.
 
 # Browser compatibility
-This extension is compatible with Firefox; Google Chrome / Chromium / Brave; Opera.
+This extension is compatible with **Firefox**; **Google Chrome and derivatives**; **Opera**.
 
 ### Compatibility issues during development
 Below the folders `chrome/` and `firefox/` you will find the extension's code for chrome based web browsers and for firefox, respectivelly.
@@ -38,3 +38,11 @@ Another relevant thing that I noticed was about javascript popup boxes, such as 
 
 # Known Issues
 There might be an issue that prevents this extension from working when currently on a search page, such as google search. As pointed out by [this issue](https://forums.opera.com/topic/31645/solved-this-page-cannot-be-scripted-due-to-an-extensionssettings-policy), go to the `extension's preferences` menu and check the `Allow access to search page results` option.
+
+# Installation
+* Firefox: [Add-ons for Firefox page]();
+* Google Chrome: [Chrome Web Store page](); 
+* Opera: [Opera add-ons page]();
+
+## Manual installation
+See the specifications regarding unpacked extensions for your particular browser.
