@@ -55,7 +55,7 @@ One more relevant thing that I noticed was about javascript popup boxes, such as
 There might be an issue that prevents this extension from working when currently on a search page, such as google search. As pointed out by [this issue](https://forums.opera.com/topic/31645/solved-this-page-cannot-be-scripted-due-to-an-extensionssettings-policy), go to the `extension's preferences` menu and check the `Allow access to search page results` option.
 
 # Installation
-* Firefox: [Add-ons for Firefox page](https://addons.mozilla.org/en-US/firefox/addon/tinyurl-otf);
+* Firefox: [Add-ons for Firefox page](https://addons.mozilla.org/en-US/firefox/addon/tinyurl-simple/);
 * Google Chrome: [Chrome Web Store page](); 
 * Opera: [Opera add-ons page]();
 
