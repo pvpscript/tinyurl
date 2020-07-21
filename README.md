@@ -16,9 +16,24 @@ Below the folders `chrome/` and `firefox/` you will find the extension's code fo
 
 At first I thought they would be extremelly necessary and that I'd face some serious core rewring when going from chrome based (where I started) to firefox, but that wasn't actually the case. When analysing the code, you'll notice that API calls under the `chrome/` folder, starts with `chrome.[something]` and for the `firefox/` folder, `browser.[something]`, and as it turns out this is not really necessary, since firefox can have API calls starting with `chrome.[something]`. Regardless of that, I decided to keep the difference in the code and document it here.
 
-A very straightforward difference is about the `options` page. In both Google Chrome and Firefox, it'll be defined in the `manifest.json` file, but for the first, the key is called `options_page`, and for the second, `options_ui`.
+The very first difference that I noticed was about the `options` page. In both Google Chrome and Firefox, it'll be defined in the `manifest.json` file, but for Firefox the key to be used is called `options_ui` instead of `options_page`. That happens because `options_page` is [deprecated](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_page) on Firefox and is [still supported](https://developer.chrome.com/extensions/manifest) by Google Chrome. In this case, it's recommended to use the `options_ui` key, once it's supported by both browsers. Another relevant thing to notice is that, each browser has a different key for using the browser style; `browser_style` for Firefox and `chrome_style` for Google Chrome.
 
-An important difference that I noticed was regarding a property called `Add-on ID`. Firefox asks for a manually defined `add-on ID` in the `manifest.json` file, otherwise the `storage` API won't work. See [bugzilla](https://bugzilla.mozilla.org/show_bug.cgi?id=1323228).
+* Firefox:
+```
+"options_ui": {
+	[...,
+	"browser_style": true
+}
+```
+* Google Chrome:
+```
+"options_ui": {
+	[...],
+	"chrome_style": true
+}
+```
+
+Another important difference that I noticed was regarding a property called `Add-on ID`. Firefox asks for a manually defined `add-on ID` in the `manifest.json` file, otherwise the `storage` API won't work. See [bugzilla](https://bugzilla.mozilla.org/show_bug.cgi?id=1323228).
 
 In this case, it's necessary to define it as shown below:
 ```
@@ -32,7 +47,7 @@ In this case, it's necessary to define it as shown below:
 More about the implications of the `Add-on ID` are discussed [here](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/).
 
 
-Another relevant thing that I noticed was about javascript popup boxes, such as alerts. When using Google Chrome and its based web browsers, it's possible to display popup boxes directly from the background script and it will be displayed in a kind-of different window and this happens to not be the case in Firefox. When trying to display alerts from a background script, the browser will notify that those are not supported by showing an warning, like this one below:
+One more relevant thing that I noticed was about javascript popup boxes, such as alerts. When using Google Chrome and its based web browsers, it's possible to display popup boxes directly from the background script and it will be displayed in a kind-of different window and this happens to not be the case in Firefox. When trying to display alerts from a background script, the browser will notify that those are not supported by showing an warning, like this one below:
 
 `alert() is not supported in background windows; please use console.log instead.`;
 
