@@ -18,7 +18,7 @@ At first I thought they would be extremelly necessary and that I'd face some ser
 
 A very straightforward difference is about the `options` page. In both Google Chrome and Firefox, it'll be defined in the `manifest.json` file, but for the first, the key is called `options_page`, and for the second, `options_ui`.
 
-An important difference that I noticed was regarding a property called `Add-on ID`. Firefox asks for a manually defined `add-on ID` in the `manifest.json` file, otherwise the `storage` API won't work. See [bugzilla][https://bugzilla.mozilla.org/show_bug.cgi?id=1323228].
+An important difference that I noticed was regarding a property called `Add-on ID`. Firefox asks for a manually defined `add-on ID` in the `manifest.json` file, otherwise the `storage` API won't work. See [bugzilla](https://bugzilla.mozilla.org/show_bug.cgi?id=1323228).
 
 In this case, it's necessary to define it as shown below:
 ```
@@ -30,7 +30,7 @@ In this case, it's necessary to define it as shown below:
 
 ```
 
-More about the implications of the `Add-on ID` are discussed [here][https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/].
+More about the implications of the `Add-on ID` are discussed [here](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/).
 
 
 Another relevant thing that I noticed was about javascript popup boxes, such as alerts. When using Google Chrome and its based web browsers, it's possible to display popup boxes directly from the background script and it will be displayed in a kind-of different window and this happens to not be the case in Firefox. When trying to display alerts from a background script, the browser will notify that those are not supported by showing an warning, like this one below:
@@ -38,4 +38,4 @@ Another relevant thing that I noticed was about javascript popup boxes, such as 
 `alert() is not supported in background windows; please use console.log instead.`;
 
 # Known Issues
-There might be an issue that prevents this extension from working when currently on a search page, such as google search. As pointed out by [this issue][https://forums.opera.com/topic/31645/solved-this-page-cannot-be-scripted-due-to-an-extensionssettings-policy], go to the `extension's preferences` menu and check the `Allow access to search page results` option.
+There might be an issue that prevents this extension from working when currently on a search page, such as google search. As pointed out by [this issue](https://forums.opera.com/topic/31645/solved-this-page-cannot-be-scripted-due-to-an-extensionssettings-policy), go to the `extension's preferences` menu and check the `Allow access to search page results` option.
