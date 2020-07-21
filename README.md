@@ -46,3 +46,6 @@ There might be an issue that prevents this extension from working when currently
 
 ## Manual installation
 See the specifications regarding unpacked extensions for your particular browser.
+
+# Similar repositories
+* [savetabs](https://github.com/pvpscript/savetabs): A web browser extension that allows the user to save every tab's url to a file
