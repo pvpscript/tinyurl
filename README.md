@@ -11,7 +11,7 @@ There are two ways of using it:
 # Browser compatibility
 This extension is compatible with **Firefox**; **Google Chrome and derivatives**; **Opera**.
 
-### Compatibility issues during development
+## Compatibility issues during development
 Below the folders `chrome/` and `firefox/` you will find the extension's code for chrome based web browsers and for firefox, respectivelly.
 
 At first I thought they would be extremelly necessary and that I'd face some serious core rewring when going from chrome based (where I started) to firefox, but that wasn't actually the case. When analysing the code, you'll notice that API calls under the `chrome/` folder, starts with `chrome.[something]` and for the `firefox/` folder, `browser.[something]`, and as it turns out this is not really necessary, since firefox can have API calls starting with `chrome.[something]`. Regardless of that, I decided to keep the difference in the code and document it here.
