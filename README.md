@@ -24,7 +24,7 @@ In this case, it's necessary to define it as shown below:
 ```
 "browser_specific_settings": {
   "gecko": {
-    "id": "some_custom_addon_id"
+    "id": "some_custom_addon_id@something.com"
   }
 }
 ```
