@@ -21,7 +21,7 @@ The very first difference that I noticed was about the `options` page. In both G
 * Firefox:
 ```
 "options_ui": {
-	[...,
+	[...],
 	"browser_style": true
 }
 ```
