@@ -1,3 +1,6 @@
+# Archive note
+After the "tinyurl.com" update, it's no longer possible to use their service as an API (which wasn't even official in the first place). Therefore, this repository is being archived.
+
 # Disclaimer
 This extension was made with the purpose of studying how browser add-ons work, thus the simple ideia. I also hope that this extension can help people out with their necessities as well as devs with how to code a browser extension.
 
